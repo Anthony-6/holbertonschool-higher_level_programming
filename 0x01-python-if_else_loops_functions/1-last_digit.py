@@ -8,6 +8,7 @@ if number < 0:
     Mn = -abs(last_number)
 if number > 0:
     last_number = number % 10
+    Mn = last_number
 if Mn > 5:
     print("Last digit of", number, "is", Mn, "and is greater than 5")
 elif Mn == 0:
