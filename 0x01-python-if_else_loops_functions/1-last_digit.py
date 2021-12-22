@@ -13,5 +13,5 @@ if Mn > 5:
     print("Last digit of", number, "is", Mn, "and is greater than 5")
 elif Mn == 0:
     print("Last digit of", number, "is", Mn, "and is 0")
-elif Mn < 6:
+elif Mn < 6 and Mn != 0:
     print("Last digit of", number, "is", Mn, "and is less than 6 and not 0")
