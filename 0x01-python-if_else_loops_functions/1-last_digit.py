@@ -6,7 +6,7 @@ if number < 0:
     last_number = number % 10
     number = -abs(number)
     Mn = -abs(last_number)
-elif number > 0:
+elif number >= 0:
     last_number = number % 10
     Mn = last_number
 if Mn > 5:
