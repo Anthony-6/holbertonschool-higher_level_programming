@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def fizzbuzz():
     for numero in range(1, 101):
         Fizz = numero % 3 == 0
