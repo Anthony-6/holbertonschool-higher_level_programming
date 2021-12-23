@@ -9,4 +9,4 @@ elif len(argv) != 2:
 for arg in range(1, len(argv)):
     print(arg, ': ', argv[arg], sep="")
 if __name__ == "__main__":
-    len(argv)
+    argv
