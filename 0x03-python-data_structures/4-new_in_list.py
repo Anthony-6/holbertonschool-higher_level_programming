@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
-    temp = my_list
+    temp = my_list.copy()
     temp[idx] = element
     if idx >= 0 and idx < len(temp):
         return temp
@@ -10,3 +10,4 @@ def new_in_list(my_list, idx, element):
         return temp
     else:
         return None
+        
