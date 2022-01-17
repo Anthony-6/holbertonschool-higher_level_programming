@@ -4,6 +4,6 @@ def safe_print_integer(value):
         value_int = isinstance(value, int)
         if value_int is True:
             print(value)
-        return value_int
+            return True
     except (TypeError, ValueError):
         return False
