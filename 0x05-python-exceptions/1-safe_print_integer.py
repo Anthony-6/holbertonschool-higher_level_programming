@@ -3,5 +3,5 @@ def safe_print_integer(value):
     try:
         if ord(value) in range(48, 57):
             return True
-    except TypeError:
+    except (TypeError, ValueError):
         return False
