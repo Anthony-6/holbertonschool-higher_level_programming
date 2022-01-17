@@ -6,7 +6,7 @@ def list_division(my_list_1, my_list_2, list_lenght):
             liste.append(my_list_1[i] / my_list_2[i])
         except ZeroDivisionError:
             liste.append(0)
-            printf("division by zero")
+            printf("division by 0")
         except TypeError:
             liste.append(0)
             print("wrong type")
