@@ -28,15 +28,15 @@ class Rectangle:
     '''
     valuemess = 'height must be >= 0'
     typemess = 'height must be an integer'
-    valuemessW = 'width must be >= 0'
-    typemessW = 'width must be an integer'
+    Width_valuemess = 'width must be >= 0'
+    Width_typemess = 'width must be an integer'
 
     def __init__(self, width=0, height=0):
 
         if type(width) is not int:
-            raise TypeError(typemessW)
+            raise TypeError(Width_typemess)
         elif width < 0:
-            raise ValueError(valuemessW)
+            raise ValueError(Width_typemess)
         if type(height) is not int:
             raise TypeError(typemess)
         elif height < 0:
@@ -51,9 +51,9 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if type(value) is not int:
-            raise TypeError(typemessW)
+            raise TypeError(Width_typemess)
         elif value < 0:
-            raise ValueError(valuemessW)
+            raise ValueError(Width_typemess)
         self.__width = value
 
     @property
