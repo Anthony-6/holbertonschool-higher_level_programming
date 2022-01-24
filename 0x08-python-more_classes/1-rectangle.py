@@ -51,9 +51,9 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if type(value) is not int:
-            raise TypeError(typemess)
+            raise TypeError(typemessW)
         elif value < 0:
-            raise ValueError(valuemess)
+            raise ValueError(valuemessW)
         self.__width = value
 
     @property
