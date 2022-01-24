@@ -26,21 +26,16 @@ class Rectangle:
     '''this class define a rectangle
         with width and height to define the size of the rectangle
     '''
-    valuemess = 'height must be >= 0'
-    typemess = 'height must be an integer'
-    Width_valuemess = 'width must be >= 0'
-    Width_typemess = 'width must be an integer'
-
     def __init__(self, width=0, height=0):
 
         if type(width) is not int:
-            raise TypeError(Width_typemess)
+            raise TypeError('width must be an integer')
         elif width < 0:
-            raise ValueError(Width_valuemess)
+            raise ValueError('width must be >= 0')
         if type(height) is not int:
-            raise TypeError(typemess)
+            raise TypeError('height must be an integer')
         elif height < 0:
-            raise ValueError(valuemess)
+            raise ValueError('height must be >= 0')
         self.__height = height
         self.__width = width
 
@@ -51,9 +46,9 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if type(value) is not int:
-            raise TypeError(Width_typemess)
+            raise TypeError('width must be an integer')
         elif value < 0:
-            raise ValueError(Width_valuemess)
+            raise ValueError('width must be >= 0')
         self.__width = value
 
     @property
@@ -63,7 +58,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if type(value) is not int:
-            raise TypeError(typemess)
+            raise TypeError('height must be an integer')
         elif value < 0:
-            raise ValueError(valuemess)
+            raise ValueError('height must be >= 0')
         self.__height = value
