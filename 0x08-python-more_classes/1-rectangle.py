@@ -36,7 +36,7 @@ class Rectangle:
         if type(width) is not int:
             raise TypeError(Width_typemess)
         elif width < 0:
-            raise ValueError(Width_typemess)
+            raise ValueError(Width_valuemess)
         if type(height) is not int:
             raise TypeError(typemess)
         elif height < 0:
@@ -53,7 +53,7 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError(Width_typemess)
         elif value < 0:
-            raise ValueError(Width_typemess)
+            raise ValueError(Width_valuemess)
         self.__width = value
 
     @property
