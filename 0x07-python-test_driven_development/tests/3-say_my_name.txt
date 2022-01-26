@@ -35,12 +35,8 @@ TypeError: first_name must be an string
 Traceback (most recent call last):
 TypeError: first_name must be an string
 
->>> say_my_name(float("inf"), "Lacoste")
+>>> say_my_name()
 Traceback (most recent call last):
-TypeError: first_name must be an string
-
->>> say_my_name(float("NaN"), "Lacoste")
-Traceback (most recent call last):
-TypeError: first_name must be an string
+TypeError: add_integer() missing 1 required positional argument: 'a'
 
 _____________________________
