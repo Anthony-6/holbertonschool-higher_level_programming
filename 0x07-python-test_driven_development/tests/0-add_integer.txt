@@ -1,9 +1,14 @@
-'''
 _____________________________
-The example module supplies one function, add_integer()
+-The 0-add_integer module
+_____________________________
+
+-import the function:
 _____________________________
 >>> add_integer = __import__('0-add_integer').add_integer
+_____________________________
 
+-test the function:
+_____________________________
 
 >>> add_integer(1, 2)
 3
@@ -59,5 +64,4 @@ OverflowError: cannot convert float infinity to integer
 >>> add_integer(float("NaN"))
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
-
-'''
+_____________________________
