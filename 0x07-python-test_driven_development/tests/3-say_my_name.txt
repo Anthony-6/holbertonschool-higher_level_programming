@@ -35,4 +35,8 @@ TypeError: first_name must be an string
 Traceback (most recent call last):
 TypeError: first_name must be an string
 
+>> say_my_name("Anthony", 1)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
 _____________________________
