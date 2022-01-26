@@ -1,9 +1,11 @@
-'''
 _____________________________
-The example module supplies one function, say_my_name()
+-The 3-say_my_name module
+_____________________________
+-import the function:
 _____________________________
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
+_____________________________
 
 >>> say_my_name("Anthony", "Lacoste")
 My name is Anthony Lacoste
@@ -33,5 +35,4 @@ TypeError: first_name must be an string
 Traceback (most recent call last):
 TypeError: first_name must be an string
 
-
-'''
+_____________________________
