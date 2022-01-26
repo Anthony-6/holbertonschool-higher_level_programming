@@ -37,10 +37,10 @@ TypeError: first_name must be an string
 
 >>> say_my_name(float("inf"), "Lacoste")
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: first_name must be an string
 
 >>> say_my_name(float("NaN"), "Lacoste")
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: first_name must be an string
 
 _____________________________
