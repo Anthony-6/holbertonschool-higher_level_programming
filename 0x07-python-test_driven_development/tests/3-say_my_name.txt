@@ -13,11 +13,12 @@ My name is Anthony Lacoste
 >>> say_my_name("Anthony")
 My name is Anthony 
 
-
 >>> say_my_name(None, )
 Traceback (most recent call last):
 TypeError: first_name must be an string
 
+>>> say_my_name(str(123), str(321))
+My name is 123 321
 
 >>> say_my_name(('1', '3'))
 Traceback (most recent call last):
