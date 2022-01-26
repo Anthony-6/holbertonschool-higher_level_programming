@@ -13,6 +13,8 @@ My name is Anthony Lacoste
 >>> say_my_name("Anthony")
 My name is Anthony 
 
+>>> say_my_name(str(123), str(123))
+My name is 123 123
 
 >>> say_my_name(None, )
 Traceback (most recent call last):
