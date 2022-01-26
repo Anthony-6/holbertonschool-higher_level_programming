@@ -17,6 +17,10 @@
             exception with the message height must be an integer
             -if height is less than 0, raise a ValueError exception
             with the message height must be >= 0
+    -Public class attribute number_of_instances:
+     Initialized to 0
+     Incremented during each new instance instantiation
+     Decremented during each instance deletion
     -Instantiation with optional width and height:
     def __init__(self, width=0, height=0):
     -Public instance method: def area(self): that returns
