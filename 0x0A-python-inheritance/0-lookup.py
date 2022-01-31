@@ -5,5 +5,4 @@ function that return the list of available attributes and methods of an object
 
 
 def lookup(obj):
-    object_ = dir(obj)
-    return object_
+    return dir(obj)
