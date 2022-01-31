@@ -3,7 +3,7 @@ _____________________________
 _____________________________
 -import the function:
 _____________________________
->>> my_list = __import__('1-my_list').my_list
+>>> MyList = __import__('1-my_list').my_list
 
 _____________________________
 >>> my_list = MyList()
