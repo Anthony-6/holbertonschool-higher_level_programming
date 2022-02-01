@@ -15,6 +15,5 @@ def write_file(filename="", text=""):
     '''
     this function write text on a file and return the number of character
     '''
-    characterNumber = 0
     with open(filename, mode='w', encoding='UTF-8') as myFile:
         return myFile.write(text)
