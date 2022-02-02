@@ -30,23 +30,23 @@ SyntaxError: invalid syntax
     
 >>> BaseGeometry().integer_validator('Anthony', 'Lacoste')
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: Anthony must be an integer
 
 >>> BaseGeometry().integer_validator([9, 9, 9], [9, 9, 9])
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: [9, 9, 9] must be an integer
 
 >>> BaseGeometry().integer_validator({'9': '9'}, {'9': '9'})
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: {'9': '9'} must be an integer
 
 >>> BaseGeometry().integer_validator("age", "4")
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: age must be an integer
 
 >>> BaseGeometry().integer_validator("age", -4)
 Traceback (most recent call last):
-ValueError: <name> must be greater than 0
+ValueError: age must be greater than 0
 
 >>> BaseGeometry().integer_validator("age", 4)
 
@@ -74,11 +74,11 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 >>> BaseGeometry().integer_validator('1', None)
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: 1 must be an integer
 
 >>> BaseGeometry().integer_validator(None, None)
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: None must be an integer
 
             +---------+
             | Boolean |
@@ -86,8 +86,8 @@ TypeError: <name> must be an integer
 
 >>> BaseGeometry().integer_validator(True, '1')
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: True must be an integer
 
 >>> BaseGeometry().integer_validator("age", True)
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: age must be an integer
