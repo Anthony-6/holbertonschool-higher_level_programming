@@ -15,6 +15,10 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
+    '''
+    this class create a rectangle based on BaseGeometry and take
+    two argument as value
+    '''
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
