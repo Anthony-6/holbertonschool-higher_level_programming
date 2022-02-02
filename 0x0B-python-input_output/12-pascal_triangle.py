@@ -12,6 +12,8 @@ def pascal_triangle(n):
     this function return a list of integer represented by
     the pascal's triangle
     '''
+    if n <= 0:
+        return []
     List = [[]]
     Val = 0
     for i in range(n):
