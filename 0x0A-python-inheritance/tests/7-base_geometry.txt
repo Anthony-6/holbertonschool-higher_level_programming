@@ -44,6 +44,10 @@ TypeError: 999 must be an integer
 Traceback (most recent call last):
 TypeError: {'9': '9'} must be an integer
 
+>>> BaseGeometry().integer_validator('age', {4, 5})
+Traceback (most recent call last):
+TypeError: age must be an integer
+
 >>> BaseGeometry().integer_validator("age", "4")
 Traceback (most recent call last):
 TypeError: age must be an integer
