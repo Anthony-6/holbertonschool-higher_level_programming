@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import json
+import os
 '''
 Class Base:
 -private class attribute __nb_objects = 0
@@ -26,3 +28,50 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None:
+            return '"[]"'
+        else:
+            return json.dumps(list_dictionaries)
+    @classmethod
+    def save_to_file(cls, list_objs):
+        with open(cls.__name__+'.json', mode='w', encoding='utf-8') as myFile:
+            if list_objs is None:
+                return myFile.write(cls.to_json_string(None))
+            else:
+                myList = []
+                for i in list_objs:
+                    myList.append(i.to_dictionary())
+                return myFile.write(cls.to_json_string(myList))
+    
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
+    
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == 'Square':
+            dummyVar = cls(1, 1, 1, 1)
+        if cls.__name__ == 'Rectangle':
+            dummyVar = cls(1, 1, 1, 1, 1)
+        dummyVar.update(**dictionary)
+        return dummyVar
+
+    @classmethod
+    def load_from_file(cls):
+        if os.path.exists(cls.__name__+'.json') is False:
+            return []
+        else:
+            with open(cls.__name__+'.json', mode='r', encoding='utf-8') as myFile:
+                myList = cls.from_json_string(myFile.read())
+                dummyList = []
+                for i in range(len(myList)):
+                    dummyVar = cls.create(**myList[i])
+                    dummyList.append(dummyVar)
+                return dummyList
+
