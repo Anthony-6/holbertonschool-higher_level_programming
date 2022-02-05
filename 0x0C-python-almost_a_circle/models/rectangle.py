@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
 from models.base import Base
-import os
-
 
 
 class Rectangle(Base):
@@ -29,7 +26,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-    
+
     @property
     def width(self):
         return self.__width
@@ -77,7 +74,7 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError('y must be >= 0')
         self.__y = value
-    
+
     def area(self):
         return self.__width * self.__height
 
@@ -90,9 +87,13 @@ class Rectangle(Base):
             for recWidth in range(self.__width):
                 print('#', end='')
             print()
-    
+
     def __str__(self):
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
+                                                       self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)
 
     def update(self, *args, **kwargs):
         if len(args) > 1:
