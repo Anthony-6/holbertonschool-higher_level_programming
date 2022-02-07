@@ -33,6 +33,10 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        '''
+        this function check if list dictionnaries is empty or not and
+        dumps list dictionnaries
+        '''
         if list_dictionaries is None:
             return '"[]"'
         else:
@@ -40,6 +44,10 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
+        '''
+        this function check if the list of object is empty or not and
+        write the list into a file
+        '''
         with open(cls.__name__+'.json', mode='w', encoding='utf-8') as myFile:
             if list_objs is None:
                 return myFile.write(cls.to_json_string(None))
@@ -51,6 +59,10 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
+        '''
+        check if the json string is empty or not and loads the string
+        if not
+        '''
         if json_string is None:
             return []
         else:
@@ -58,6 +70,10 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
+        '''
+        this function create a dictionnary with object of square or
+        rectangle
+        '''
         if cls.__name__ == 'Square':
             dummyVar = cls(1, 1, 1, 1)
         if cls.__name__ == 'Rectangle':
@@ -67,6 +83,10 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
+        '''
+        open a file and check if a file exist or not and create
+        the file with needed information if true
+        '''
         if os.path.exists(cls.__name__+'.json') is False:
             return []
         else:
