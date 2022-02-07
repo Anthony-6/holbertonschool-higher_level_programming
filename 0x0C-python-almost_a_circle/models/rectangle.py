@@ -159,7 +159,7 @@ class Rectangle(Base):
         check if there is more than 1 and 5 arg in our list
         break the loop if there is more than five arg
         '''
-        if len(args) > 1:
+        if len(args) == 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
         else:
