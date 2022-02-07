@@ -81,9 +81,9 @@ class Base():
         rectangle
         '''
         if cls.__name__ == 'Square':
-            dummyVar = cls(1, 1, 1, 1)
+            dummyVar = cls(1)
         if cls.__name__ == 'Rectangle':
-            dummyVar = cls(1, 1, 1, 1, 1)
+            dummyVar = cls(1, 1)
         dummyVar.update(**dictionary)
         return dummyVar
 

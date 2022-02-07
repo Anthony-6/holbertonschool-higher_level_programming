@@ -172,4 +172,5 @@ class Rectangle(Base):
         '''
         return the dictionnary of rectangle
         '''
-        return self.__dict__
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
