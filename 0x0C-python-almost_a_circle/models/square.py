@@ -70,11 +70,10 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 setattr(self, key, value)
         else:
-            myArg = ['size', 'x', 'y']
+            myArg = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 if i != 5:
                     setattr(self, myArg[i], args[i])
-
 
     def to_dictionary(self):
         '''
