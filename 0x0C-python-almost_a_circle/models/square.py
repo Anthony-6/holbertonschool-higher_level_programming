@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+'''
+this function create a square that inherats from the rectangle
+by importating Rectangle class
+'''
 from models.rectangle import Rectangle
 '''
 class Square that inherits from Rectangle:
