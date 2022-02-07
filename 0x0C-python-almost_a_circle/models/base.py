@@ -44,7 +44,7 @@ class Base():
         dumps list dictionnaries
         '''
         if list_dictionaries is None:
-            return '"[]"'
+            return '[]'
         else:
             return json.dumps(list_dictionaries)
 
@@ -54,7 +54,7 @@ class Base():
         this function check if the list of object is empty or not and
         write the list into a file
         '''
-        with open(cls.__name__+'.json', mode='w', encoding='utf-8') as myFile:
+        with open(cls.__name__ + '.json', 'w', encoding='utf-8') as myFile:
             if list_objs is None:
                 return myFile.write(cls.to_json_string(None))
             else:
