@@ -72,7 +72,7 @@ class Square(Rectangle):
         else:
             myArg = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
-                if i != 5:
+                if i != 4:
                     setattr(self, myArg[i], args[i])
 
     def to_dictionary(self):
