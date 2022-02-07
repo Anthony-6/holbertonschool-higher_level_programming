@@ -21,7 +21,9 @@ test the type of it-
 
 
 class Base():
-
+    '''
+    main class for the programm that inherit from
+    '''
     __nb_objects = 0
 
     def __init__(self, id=None):
