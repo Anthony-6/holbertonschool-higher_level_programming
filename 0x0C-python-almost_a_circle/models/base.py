@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''
+this program import json and os module to make it work
+'''
 import json
 import os
 '''
