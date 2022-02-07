@@ -21,9 +21,10 @@ test the type of it-
 
 
 class Base():
-    __nb_objects = 0
-    def __init__(self, id=None):
 
+    __nb_objects = 0
+
+    def __init__(self, id=None):
         '''
         this function test if id is none and create a public instance if not
         none
