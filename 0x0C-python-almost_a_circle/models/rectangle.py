@@ -160,15 +160,13 @@ class Rectangle(Base):
         break the loop if there is more than five arg
         '''
         if len(args) > 1:
-            myArg = ['id', 'width', 'height', 'x', 'y']
             for key, value in kwargs.items():
                 setattr(self, key, value)
-            else:
-                for i in range(len(args)):
-                    if i != 5:
-                        break
-                    else:
-                        setattr(self, myArg[i], args[i])
+        else:
+            myArg = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                if i != 5:
+                    setattr(self, myArg[i], args[i])
 
     def to_dictionary(self):
         '''
