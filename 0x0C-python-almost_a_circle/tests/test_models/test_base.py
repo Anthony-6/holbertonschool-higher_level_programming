@@ -208,12 +208,6 @@ class TestBaseFromJsonString(unittest.TestCase):
         self.assertEqual(type(list_output), list)
         self.assertEqual(list_input, list_output)
 
-    def test_from_json_string_empty_rectangle(self):
-        """Test with an empty string as argument."""
-        list_output = Rectangle.from_json_string("")
-        self.assertEqual(list_output, [])
-        self.assertEqual(type(list_output), list)
-
     def test_from_json_string_none_rectangle(self):
         """Test with None as argument."""
         list_output = Rectangle.from_json_string(None)
@@ -228,12 +222,6 @@ class TestBaseFromJsonString(unittest.TestCase):
         list_output = Square.from_json_string(json_list_input)
         self.assertEqual(type(list_output), list)
         self.assertEqual(list_input, list_output)
-
-    def test_from_json_string_empty_square(self):
-        """Test with an empty string as argument."""
-        list_output = Square.from_json_string("")
-        self.assertEqual(list_output, [])
-        self.assertEqual(type(list_output), list)
 
     def test_from_json_string_none_square(self):
         """Test with None as argument."""
