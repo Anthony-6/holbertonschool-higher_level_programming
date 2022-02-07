@@ -152,7 +152,7 @@ class TestBaseSaveToFile(unittest.TestCase):
         os.remove('Square.json')
 
     def test_save_to_file_none_rectangle(self):
-        """Test with None as argument."""
+        """Test with None as arguement."""
         Rectangle.save_to_file(None)
         list_objs = '[]'
         with open('Rectangle.json', 'r', encoding='utf-8') as f:
@@ -166,6 +166,16 @@ class TestBaseSaveToFile(unittest.TestCase):
         with open('Square.json', 'r', encoding='utf-8') as f:
             self.assertEqual(f.read(), list_objs)
         os.remove('Square.json')
+
+    def test_no_arguments(self):
+        """Test without arguments."""
+        with self.assertRaises(TypeError):
+            Square.save_to_file()
+
+    def test_too_many_arguments(self):
+        """Test with too many arguments."""
+        with self.assertRaises(TypeError):
+            Rectangle.save_to_file([], [])
 
     def test_save_to_file_empty_list_rectangle(self):
         """Test with an empty list for rectangle"""
@@ -182,16 +192,6 @@ class TestBaseSaveToFile(unittest.TestCase):
         with open('Square.json', 'r', encoding='utf-8') as f:
             self.assertEqual(f.read(), list_objs)
         os.remove('Square.json')
-
-    def test_no_arguments(self):
-        """Test without arguments."""
-        with self.assertRaises(TypeError):
-            Square.save_to_file()
-
-    def test_too_many_arguments(self):
-        """Test with too many arguments."""
-        with self.assertRaises(TypeError):
-            Rectangle.save_to_file([], [])
 
 
 class TestBaseFromJsonString(unittest.TestCase):
@@ -300,23 +300,11 @@ class TestBaseCreate(unittest.TestCase):
         s2 = Square.create(**s1_dictionary)
         self.assertNotEqual(s1, s2)
 
-    def test_create_rectangle_error(self):
-        """Tests that doesn't create a rectangle"""
-        with self.assertRaises(TypeError):
-            s1 = "create"
-            Rectangle.create(s1)
-
-    def test_create_square_error(self):
-        """Tests that doesn't create a square"""
-        with self.assertRaises(TypeError):
-            s1 = "create"
-            Square.create(s1)
-
 
 class TestLoadFromFile(unittest.TestCase):
     """Class that tests the Base method 'load_from_file'."""
     def test_no_file(self):
-        """Tests when the file doesn't exist."""
+        """Tests when the file doens't exist."""
         if os.path.exists("Square.json"):
             os.remove("Square.json")
         if os.path.exists("Rectangle.json"):
