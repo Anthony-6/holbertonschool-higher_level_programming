@@ -19,8 +19,14 @@ Assign each argument width, height, x and y to the right attribute
 
 
 class Rectangle(Base):
+    '''
+    class rectangle that inherit from base class
+    '''
     def __init__(self, width, height, x=0, y=0, id=None):
-
+        '''
+        this function create value for rectangle and check if value are
+        correct and raise error if not
+        '''
         super().__init__(id)
         if type(width) is not int:
             raise TypeError('width must be an integer')
@@ -45,10 +51,16 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        '''
+        set width as private value
+        '''
         return self.__width
 
     @width.setter
     def width(self, value):
+        '''
+        define value and check if it's value is correct and raise error if not
+        '''
         if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
@@ -57,10 +69,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        '''
+        set height as private value
+        '''
         return self.__height
 
     @height.setter
     def height(self, value):
+        '''
+        define value and check if it's value is correct and raise error if not
+        '''
         if type(value) is not int:
             raise TypeError('height must be an integer')
         elif value < 0:
@@ -69,10 +87,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        '''
+        set x as a private value
+        '''
         return self.__x
 
     @x.setter
     def x(self, value):
+        '''
+        define value and check if it's value is correct and raise error if not
+        '''
         if type(value) is not int:
             raise TypeError('x must be an integer')
         elif value < 0:
@@ -81,10 +105,16 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        '''
+        set y as a private value
+        '''
         return self.__y
 
     @y.setter
     def y(self, value):
+        '''
+        define value and check if it's value is correct and raise error if not
+        '''
         if type(value) is not int:
             raise TypeError('y must be an integer')
         elif value < 0:
@@ -92,9 +122,15 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        '''
+        return the area of the rectangle
+        '''
         return self.__width * self.__height
 
     def display(self):
+        '''
+        display the rectangle in a visual form when executed
+        '''
         for posY in range(self.__y):
             print()
         for recHeight in range(self.__height):
@@ -105,6 +141,9 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        '''
+        return the string format of the information of the rectangle
+        '''
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
                                                        self.__x,
                                                        self.__y,
@@ -112,6 +151,10 @@ class Rectangle(Base):
                                                        self.__height)
 
     def update(self, *args, **kwargs):
+        '''
+        check if there is more than 1 and 5 arg in our list
+        break the loop if there is more than five arg
+        '''
         if len(args) > 1:
             myArg = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
@@ -124,4 +167,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        '''
+        return the dictionnary of rectangle
+        '''
         return self.__dict__
