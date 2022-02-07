@@ -65,7 +65,7 @@ class Square(Rectangle):
         '''
         this function update value to return to the str with square value
         '''
-        if len(args) > 1:
+        if len(args) == 0:
             myArg = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 if i > 5:
