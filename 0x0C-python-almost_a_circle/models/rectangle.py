@@ -53,6 +53,16 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
+    def __str__(self):
+        '''
+        return the string format of the information of the rectangle
+        '''
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
+                                                       self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)
+
     @property
     def width(self):
         '''
@@ -143,16 +153,6 @@ class Rectangle(Base):
             for recWidth in range(self.__width):
                 print('#', end='')
             print()
-
-    def __str__(self):
-        '''
-        return the string format of the information of the rectangle
-        '''
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
-                                                       self.__x,
-                                                       self.__y,
-                                                       self.__width,
-                                                       self.__height)
 
     def update(self, *args, **kwargs):
         '''
