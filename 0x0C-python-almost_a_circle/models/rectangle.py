@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+'''
+this program create a rectangle with information imported by Base
+file
+'''
 from models.base import Base
 '''
 class Rectangle that inherits from Base:
