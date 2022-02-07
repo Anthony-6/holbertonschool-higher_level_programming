@@ -31,7 +31,6 @@ class Rectangle(Base):
         this function create value for rectangle and check if value are
         correct and raise error if not
         '''
-        super().__init__(id)
         if type(width) is not int:
             raise TypeError('width must be an integer')
         if width <= 0:
@@ -52,6 +51,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+        super().__init__(id)
 
     @property
     def width(self):
