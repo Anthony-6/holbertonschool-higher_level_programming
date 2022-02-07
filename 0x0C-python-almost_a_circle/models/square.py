@@ -63,18 +63,18 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         '''
-        this function update value to return to the str with square value
+        check if there is more than 1 and 5 arg in our list
+        break the loop if there is more than five arg
         '''
         if len(args) == 0:
-            myArg = ['id', 'size', 'x', 'y']
-            for i in range(len(args)):
-                if i > 5:
-                    break
-                else:
-                    setattr(self, myArg[i], args[i])
-        else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+        else:
+            myArg = ['size', 'x', 'y']
+            for i in range(len(args)):
+                if i != 5:
+                    setattr(self, myArg[i], args[i])
+
 
     def to_dictionary(self):
         '''
