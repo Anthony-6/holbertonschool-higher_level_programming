@@ -162,7 +162,7 @@ class Rectangle(Base):
         if len(args) > 1:
             myArg = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
-                if i > 5:
+                if i != 5:
                     break
                 else:
                     setattr(self, myArg[i], args[i])
