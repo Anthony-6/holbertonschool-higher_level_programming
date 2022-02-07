@@ -711,6 +711,7 @@ class TestRectangle_update_args(unittest.TestCase):
         with self.assertRaises(ValueError):
             r = Rectangle(89, 0)
             r.height
+
     def test_update_args_height_negative(self):
         r = Rectangle(10, 10, 10, 10, 10)
         with self.assertRaises(ValueError):
