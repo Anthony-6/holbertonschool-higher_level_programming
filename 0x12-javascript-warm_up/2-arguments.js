@@ -4,11 +4,11 @@ if (arg.length < 3)
 {
   console.log('No argument');
 }
-if (arg.length === 3)
+else if (arg.length === 3)
 {
   console.log('Argument found');
 }
-if (arg.length > 3)
+else
 {
   console.log('Arguments found');
 }
