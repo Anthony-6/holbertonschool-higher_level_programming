@@ -1,7 +1,7 @@
 #!/usr/bin/node
 function factorial (i) {
   const isInt = parseInt(i);
-  if (isNaN(isInt) || i) {
+  if (isNaN(isInt) || i === 0) {
     return 1;
   } else {
       return x * factorial(isInt - 1);
