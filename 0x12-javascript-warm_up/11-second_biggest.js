@@ -9,7 +9,7 @@ if (arg.length < 4) {
     arr[i - 2] = parseInt(arg[i]);
     i++;
   }
-  const max = Math.max.apply(null, arr);  
+  const max = Math.max.apply(null, arr);
   arr.splice(arr.indexOf(max), 1);
   const second = Math.max.apply(null, arr);
   console.log(second);
