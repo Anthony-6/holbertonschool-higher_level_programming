@@ -4,7 +4,7 @@ module.exports = class Rectangle {
     if (h > 0 && w > 0) {
     this.width = w;
     this.height = h;
-  }
+    }
   }
   print () {
     let i = 0;
