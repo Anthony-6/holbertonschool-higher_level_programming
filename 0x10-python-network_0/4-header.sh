@@ -1,3 +1,3 @@
 #!/bin/bash
 # Bash script that takes in a URL as an argument, sends a GET request to the URL, and displays the body of the response
-curl -iH "X-School-User-Id"="98" -sX POST $1
+curl -i -H -d "X-School-User-Id"="98" -sX GET $1
