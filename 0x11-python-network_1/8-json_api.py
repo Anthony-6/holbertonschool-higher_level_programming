@@ -6,11 +6,11 @@ if __name__ == "__main__":
     from sys import argv
 
     if len(argv) == 1:
-        data = {'q': ''}
+        q=''
     else:
-        data = {'q': argv[1]}
+        q=argv[1]
     url = "http://5771634acedf.c90a0b50.hbtn-cod.io:5000/search_user"
-    req = requests.post(url, data)
+    req = requests.post(url, q)
     try:
         json = req.json()
         if json == {}:
