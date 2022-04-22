@@ -9,6 +9,6 @@ if __name__ == "__main__":
         body = myUrl.read()
         bodyutf = body.decode('utf-8')
         print("Body response:")
-        print("\t- type {}".format(body.__class__))
+        print("\t- type: {}".format(body.__class__))
         print("\t- content: {}".format(body))
-        print("\t- utf-8 content: {}".format(bodyutf))
+        print("\t- utf8 content: {}".format(bodyutf))
