@@ -6,9 +6,9 @@ if __name__ == "__main__":
     import sys
 
     username = sys.argv[1]
-    passwd = sys.argv[2]
-    url = "https://api.github.com/users/"
+    pwd = sys.argv[2]
+    url = "https://api.github.com/user"
 
-    userdat = requests.get(url, auth=(username, passwd))
+    userdat = requests.get(url, auth=(username, pwd))
     userjson = userdat.json()
     print(userjson.get('id'))
